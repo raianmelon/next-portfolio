@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <h1>eko</h1>
+    <h1>eko-a</h1>
   );
 }
