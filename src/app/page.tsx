@@ -1,45 +1,55 @@
-import {FilledButton, FilledButtonWithOutline} from "@/components/Buttons";
+import {FilledButton} from "@/components/Buttons";
+import AnimatedScrollIcon from "@/components/AnimatedScrollIcon";
+import HomeBackground from "@/components/HomeBackground";
+import InfiniteScroll from "@/components/InfiniteScroll";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
-    const backgroundStyle = {
-        // background: `radial-gradient(circle, #ffffff 10%, transparent 12%),
-        //          radial-gradient(circle at bottom left, #ffffff 5%, transparent 6%),
-        //          radial-gradient(circle at bottom right, #ffffff 5%, transparent 6%),
-        //          radial-gradient(circle at top left, #ffffff 5%, transparent 6%),
-        //          radial-gradient(circle at top right, #ffffff 5%, transparent 6%)`,
-        backgroundSize: '2em 2em',
-        opacity: 0.3,
-
-        width: 'clamp(300px, calc(100vw - 200px), 1000px)',
-        maxHeight: 'calc(100vh - 200px)',
-        aspectRatio: '1.3/1',
-
-        borderTopLeftRadius: '50%',
-        borderTopRightRadius: '50%',
-        borderBottomLeftRadius: '50%',
-        borderBottomRightRadius: '50%',
-    }
 
   return (
       <>
-          <div className={'overflow-show md:overflow-hidden flex flex-col gap-10 justify-around md:justify-center items-center text-center min-h-[100dvh] pt-20 relative'}>
+          <section className={'px-4 md:px-16 overflow-show md:overflow-hidden flex flex-col gap-10 justify-around md:justify-center items-center text-center h-[calc(100vh-50px)] md:h-[100vh] pt-20 relative'}>
               <div className={'flex flex-col justify-center items-center gap-10 md:gap-16'}>
                   <div className={'flex flex-col justify-center items-center gap-4 md:gap-8'}>
-                      <h1 className={'text-4xl md:text-6xl font-semibold opacity-0 inline-block translate-y-full'} style={{animation: 'popupword 0.5s forwards', animationDelay: `200ms`}}>Vaša vizija<span className={'text-yellow font-extrabold text-3xl md:text-7xl'}>,</span> moja stručnost<span className={'text-yellow font-extrabold text-3xl md:text-7xl'}>.</span></h1>
+                      <h1 className={'text-4xl md:text-6xl font-semibold opacity-0 inline-block translate-y-full'} style={{animation: 'popupword 0.5s forwards', animationDelay: `200ms`}}>
+                          Vaša vizija
+                          <span className={'text-yellow font-extrabold text-3xl md:text-7xl'}>, </span>
+                          moja stručnost
+                          <span className={'text-yellow font-extrabold text-3xl md:text-7xl'}>.</span>
+                      </h1>
                       <p className={'text-sm md:text-lg font-light opacity-0 inline-block translate-y-full'} style={{animation: 'popupword 0.5s forwards', animationDelay: `300ms`}}>Transformiram vaše ideje u web stranice.</p>
                   </div>
                   <FilledButton href={'#kontakt'} className={'md:text-lg px-6 py-2 opacity-0 inline-block translate-y-full'} style={{animation: 'popupword 0.5s forwards', animationDelay: `400ms`}}>Započnite svoj projekt</FilledButton>
               </div>
-              <div className={'relative md:absolute -z-30 overflow-hidden shadow-[5px_5px_60px_-20px_yellow]'} style={backgroundStyle}>
-                  <div className={'w-[calc(100%-65%)] aspect-[1/1] animate-spin rounded-full bg-yellow opacity-20 -z-10 top-0 bottom-0 left-0 right-0 m-auto absolute'} style={{animation: 'ping 2s infinite forwards'}} />
-                  <div className={'w-[calc(100%-65%)] aspect-[1/1] animate-spin duration-1000 rounded-full bg-[#000d09] -z-10 absolute top-0 bottom-0 left-0 right-0 m-auto shadow-[inset_5px_5px_60px_-15px_yellow]'} style={{animation: 'spin 2s infinite forwards'}} />
-                  <div className={'w-[calc(100%-80%)] aspect-[1/1] rounded-full bg-[#000] -z-10 absolute top-0 bottom-0 left-0 right-0 m-auto'} />
+              <HomeBackground />
+              <AnimatedScrollIcon/>
+          </section>
+          <InfiniteScroll/>
+          <section className={'px-4 md:px-16'}>
+              <h1 className={'w-full text-3xl text-center my-20'}>Izdvojeni projekti</h1>
+              <div className={'flex justify-around items-center'}>
+                  <div className={'flex flex-col justify-start items-start gap-5 p-4 max-w-[33%]'}>
+                      <Link target={'_blank'} href={'https://weather-w93p-raianmlns-projects.vercel.app/'} >
+                          <Image src={'/weather-project.png'} className={'opacity-50 hover:opacity-100 transition-all duration-300 rounded-xl'} alt={'Vrijeme projekt'} width={500} height={200} />
+                      </Link>
+                      <h1>Vrijeme</h1>
+                      <h1>Web aplikacija za pracenje temperature, vrstu oblaka i brzinu vjetra za bilo koji grad iz Svijeta!</h1>
+                  </div>
+                  <div className={'flex flex-col justify-start items-start gap-5 p-4'}>
+                      <Link target={'_blank'} href={'https://weather-w93p-raianmlns-projects.vercel.app/'} >
+                          <Image src={'/weather-project.png'} className={'opacity-50 hover:opacity-100 transition-all duration-300 rounded-xl'} alt={'Vrijeme projekt'} width={500} height={200} />
+                      </Link>
+                      <h1>Vrijeme</h1>
+                  </div>
               </div>
-          </div>
-          <div>
-
-          </div>
+          </section>
+          <section className={'h-[100vh]'}>
+              <h1>Da</h1>
+          </section>
+          <section className={'h-[100vh]'}>
+              <h1>Da</h1>
+          </section>
       </>
-
   );
 }

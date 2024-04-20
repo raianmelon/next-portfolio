@@ -2,19 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes ping {
-    from {
-        transform: rotate(0deg) scale(1);
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes ping {
+        from {
+            transform: rotate(0deg) scale(1);
+        }
+        to {
+            transform: rotate(180deg) scale(3);
+            opacity: 0;
+        }
     }
-    to {
-        transform: rotate(180deg) scale(3);
-        opacity: 0;
-    }
-}
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes mouse-scroll {
+        50% {
+            top: 1.5rem;
+        }
+        100% {
+            top: -1.5rem;
+        }
+    }
+
+    @keyframes up-down-slide {
+        0% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(-33.333333%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    .mouse-animation:after {
+        animation: mouse-scroll 3s infinite;
+    }
+
+    @keyframes infinite-scroll {
+        100% {
+            transform: translate(calc(-50% - 0.625rem))
+        }
     }
 }
 
@@ -25,7 +58,24 @@
     }
 }
 
+@keyframes popupword-15 {
+    100% {
+        transform: translateZ(0);
+        opacity: 0.15;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+::selection {
+    color: #122620;
+    background: #FED700;
+}
+
+::-moz-selection {
+    color: #122620;
+    background: #FED700;
 }

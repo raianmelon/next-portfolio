@@ -19,10 +19,10 @@ export default function RootLayout({
 }>) {
     return (
     <html lang="en">
-      <body className={inter.className + ' bg-[#000d09] text-white'}>
+      <body className={inter.className + ' bg-background text-white'}>
       <TitleHandler DefaultTitle={metadata.title}>
           <NavBar/>
-          <main className={'px-4 md:px-16 min-h-[calc(100vh-90px)] overflow-x-hidden'}>
+          <main className={'min-h-[calc(100vh-90px)] overflow-x-hidden'}>
               {children}
           </main>
           <Footer/>

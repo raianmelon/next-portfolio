@@ -61,6 +61,14 @@ export default function NavBar() {
     };
 
     useEffect(() => {
+        if (isMenuOpenWithNoDelay) {
+            document.body.classList.add("overflow-y-hidden")
+        } else {
+            document.body.classList.remove("overflow-y-hidden")
+        }
+    }, [isMenuOpen])
+
+    useEffect(() => {
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -70,10 +78,10 @@ export default function NavBar() {
 
     return (
         <>
-        <nav className={'fixed top-0 z-50 w-full px-4 md:px-16 py-4 flex justify-between items-center border-b-2 border-b-dark-green backdrop-blur'}>
+        <nav className={'fixed top-0 z-50 w-full px-4 md:px-16 py-4 flex justify-between items-center border-b-2 border-b-dark-green border-opacity-80 backdrop-blur-sm bg-background bg-opacity-80'}>
             <Link href={'/'} className={'flex justify-center items-center gap-5'}>
                 <Image className={'rounded-full hover:ring-[2.5px] ring-yellow transition-all'} src={'logo.svg'} alt={'Logo Raian Melon'} width={50} height={50} />
-                <span className={'flex text-lg font-bold gap-0.5 group transition-all py-2.5'}><h1 className={'text-yellow  inline-block align-middle group-hover:text-white transition-all'}>Raian</h1><h1 className={'text-white inline-block align-middle group-hover:text-yellow transition-all'}>Melon</h1></span>
+                <span className={'flex text-lg font-bold gap-0.5 group transition-all py-2.5'}><h1 className={'text-yellow inline-block align-middle group-hover:text-white transition-all'}>Raian</h1><h1 className={'text-white inline-block align-middle group-hover:text-yellow transition-all'}>Melon</h1></span>
             </Link>
 
             <button onClick={toggleMenu} className={'lg:hidden'}>
@@ -103,7 +111,7 @@ export default function NavBar() {
             </div>
         </nav>
         {isMenuOpen && (
-            <div className={`fixed overflow-hidden top-0 flex flex-col gap-10 z-10 bg-[#000d09] items-center justify-center text-xl py-20 transition-opacity duration-500 w-screen max-h-[100dvh] h-[100dvh]`} style={{opacity}}>
+            <div className={`fixed top-0 flex flex-col gap-10 z-10 bg-background items-center justify-center text-xl py-20 mb-40 transition-opacity duration-500 w-screen h-[100dvh]`} style={{opacity}}>
                 {links.map(({id, link, text, variant}) => (
                     !variant ? (
                         <div key={id} className={'overflow-hidden'}>
@@ -113,13 +121,13 @@ export default function NavBar() {
                             <FilledButtonWithOutline key={id} href={link} className={'opacity-0 translate-y-full inline-block px-6 py-3'} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(id-1)*100}ms`}}>{text}</FilledButtonWithOutline>
                     ) : null
                 ))}
-                    <Link className={'absolute bottom-4 left-0 text-6xl w-screen px-4 pb-4 opacity-0 translate-y-full inline-block'} href={"https://github.com/raianmelon"} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(6)*100}ms`}}><Image src={'/github-mark-white.svg'} alt={'Github'} width={50} height={50}></Image></Link>
+                    <Link className={'absolute bottom-4 left-0 text-6xl px-4 pb-4 opacity-0 translate-y-full inline-block'} href={"https://github.com/raianmelon"} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(6)*100}ms`}}><Image src={'/github-mark-white.svg'} alt={'Github'} width={50} height={50}></Image></Link>
             </div>
         )}
     </>
     )
 }
-function NavButton ({children, href, className, style}: {children: React.ReactNode, href: string, className?: string, style?:object}) {
+export function NavButton ({children, href, className, style}: {children: React.ReactNode, href: string, className?: string, style?:object}) {
     return (
         <Link href={href} className={`after:content-[""] text-white after:block relative after:absolute after:-bottom-2 after:w-0 after:left-0 hover:after:w-full after:transition-all after:duration-500 after:h-0.5 after:bg-yellow ${className}`} style={style}>{children}</Link>
     )
