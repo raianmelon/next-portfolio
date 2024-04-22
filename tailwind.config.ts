@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -18,9 +19,24 @@ const config: Config = {
         'yellow': '#FED700',
         'dark-green': '#122620',
         'green': '#788585'
-      }
+      },
+      animation: {
+        'popupword': 'popupword 0.5s forwards',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+          {
+            'translate-z': (value) => ({
+              '--tw-translate-z': value,
+              transform: ` translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))`,
+            }),
+          },
+          { values: theme('translate'), supportsNegativeValues: true }
+      )
+    })
+  ],
 };
 export default config;
