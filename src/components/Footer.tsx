@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
             </div>
             <div className={'flex flex-col gap-6 justify-start lg:justify-center items-start lg:items-center w-[100%] lg:w-[24%]'}>
-                <h1 className={'text-white font-semibold text-lg'}>Social</h1>
+                <h1 className={'text-white font-semibold text-lg'}>Društvene mreže</h1>
                 <div className={'flex flex-col gap-4 justify-start items-start lg:justify-center lg:items-center'}>
                     <Link target={'_blank'} className={'flex gap-2 justify-center items-center overflow-hidden transition-all hover:text-yellow'} href={"https://github.com/raianmelon"}><Github/>Github</Link>
                     <Link target={'_blank'} className={'flex gap-2 justify-center items-center overflow-hidden transition-all hover:text-yellow'} href={"https://instagram.com/raianmelon"}><Instagram/>Instagram</Link>
