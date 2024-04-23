@@ -18,7 +18,7 @@ const config: Config = {
         'background': '#000d09',
         'yellow': '#FED700',
         'dark-green': '#122620',
-        'green': '#788585'
+        'gray': '#788585'
       },
       animation: {
         'popupword': 'popupword 0.5s forwards',

@@ -13,28 +13,28 @@ export default function NavBar() {
         {
             id: 1,
             text: "Pocetna",
-            link: "/"
+            link: "#home"
         },
         {
             id: 2,
             text: "Projekti",
-            link: "#href"
+            link: "#projects"
         },
         {
             id: 3,
             text: "Usluge",
-            link: "#href"
+            link: "#services"
         },
         {
             id: 4,
-            text: "O meni",
-            link: "#href"
+            text: "Vještine",
+            link: "#skills"
         },
         {
             id: 5,
             variant: "filled",
             text: "Kontakt",
-            link: "#href"
+            link: "#contact"
         },
     ];
 

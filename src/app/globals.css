@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html` {
+    scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     @keyframes ping {
         from {
@@ -47,6 +51,12 @@
     @keyframes infinite-scroll {
         100% {
             transform: translate(calc(-50% - 0.625rem))
+        }
+    }
+
+    @keyframes infinite-scroll2 {
+        100% {
+            transform: translate(calc(-50% - 3rem))
         }
     }
 }
