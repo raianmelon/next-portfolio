@@ -4,7 +4,7 @@ import HomeBackground from "@/components/HomeBackground";
 import InfiniteScroll from "@/components/InfiniteScroll";
 import Link from "next/link";
 import Image from "next/image";
-import {Dot, Github, Mail, PencilLine, Phone, ShoppingBasket, SquareArrowOutUpRight, Wrench} from "lucide-react";
+import {Github, Mail, PencilLine, Phone, ShoppingBasket, SquareArrowOutUpRight, Wrench} from "lucide-react";
 
 export default function Home() {
 
