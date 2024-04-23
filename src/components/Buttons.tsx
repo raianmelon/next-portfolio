@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export function FilledButtonWithOutline ({children, href, className, style}: {children: React.ReactNode, href: string, className?: string, style?:object}) {
+export function FilledButtonWithOutline ({children, href, className, style, onClick}: {children: React.ReactNode, href: string, className?: string, style?:object, onClick?: any}) {
     return (
-        <Link href={href} className={'ring-yellow hover:bg-yellow transition-all duration-500 hover:text-black ring-[1.5px] px-4 py-1.5 rounded-md' + ' ' + className} style={style}>{children}</Link>
+        <Link href={href} onClick={onClick} className={'ring-yellow hover:bg-yellow transition-all duration-500 hover:text-black ring-[1.5px] px-4 py-1.5 rounded-md' + ' ' + className} style={style}>{children}</Link>
     )
 }
 

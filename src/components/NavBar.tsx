@@ -79,7 +79,10 @@ export default function NavBar() {
     return (
         <>
         <nav className={'fixed top-0 z-50 w-full px-4 md:px-16 py-4 flex justify-between items-center border-b-2 border-b-dark-green border-opacity-95 backdrop-blur-sm bg-background bg-opacity-95'}>
-            <Link href={'/'} className={'flex justify-center items-center gap-5'}>
+            <Link href={'/'} onClick={() => {
+                setIsMenuOpen(false)
+                setIsMenuOpenWithNoDelay(false)
+            }} className={'flex justify-center items-center gap-5'}>
                 <Image className={'rounded-full hover:ring-[2.5px] ring-yellow transition-all'} src={'logo.svg'} alt={'Logo Raian Melon'} width={50} height={50} />
                 <span className={'flex text-lg font-bold gap-0.5 group transition-all py-2.5'}><h1 className={'text-yellow inline-block align-middle group-hover:text-white transition-all'}>Raian</h1><h1 className={'text-white inline-block align-middle group-hover:text-yellow transition-all'}>Melon</h1></span>
             </Link>
@@ -115,10 +118,10 @@ export default function NavBar() {
                 {links.map(({id, link, text, variant}) => (
                     !variant ? (
                         <div key={id} className={'overflow-hidden'}>
-                            <NavButton href={link} className={'opacity-0 translate-y-full inline-block'} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(id-1)*100}ms`}}>{text}</NavButton>
+                            <NavButton href={link} onClick={toggleMenu} className={'opacity-0 translate-y-full inline-block'} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(id-1)*100}ms`}}>{text}</NavButton>
                         </div>
                     ) : variant === 'filled' ? (
-                            <FilledButtonWithOutline key={id} href={link} className={'opacity-0 translate-y-full inline-block px-6 py-3'} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(id-1)*100}ms`}}>{text}</FilledButtonWithOutline>
+                            <FilledButtonWithOutline key={id} href={link} onClick={toggleMenu} className={'opacity-0 translate-y-full inline-block px-6 py-3'} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(id-1)*100}ms`}}>{text}</FilledButtonWithOutline>
                     ) : null
                 ))}
                     <Link className={'absolute bottom-4 left-0 text-6xl px-4 pb-4 opacity-0 translate-y-full inline-block'} href={"https://github.com/raianmelon"} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(6)*100}ms`}}><Image src={'/github-mark-white.svg'} alt={'Github'} width={50} height={50}></Image></Link>
@@ -127,8 +130,8 @@ export default function NavBar() {
     </>
     )
 }
-export function NavButton ({children, href, className, style}: {children: React.ReactNode, href: string, className?: string, style?:object}) {
+export function NavButton ({children, href, className, style, onClick}: {children: React.ReactNode, href: string, className?: string, style?:object , onClick?: any}) {
     return (
-        <Link href={href} className={`after:content-[""] text-white after:block relative after:absolute after:-bottom-2 after:w-0 after:left-0 hover:after:w-full after:transition-all after:duration-500 after:h-0.5 after:bg-yellow ${className}`} style={style}>{children}</Link>
+        <Link href={href} onClick={onClick} className={`after:content-[""] text-white after:block relative after:absolute after:-bottom-2 after:w-0 after:left-0 hover:after:w-full after:transition-all after:duration-500 after:h-0.5 after:bg-yellow ${className}`} style={style}>{children}</Link>
     )
 }

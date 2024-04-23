@@ -22,10 +22,10 @@ export default function Footer() {
                     <h1 className={'text-white font-semibold text-lg'}>Linkovi</h1>
                     <div className={'flex flex-col gap-4 justify-center items-center'}>
                         <Link href={'/'} className={'text-white hover:text-yellow font-light transition-all'}>Pocetna</Link>
-                        <Link href={'/projekti'} className={'text-white hover:text-yellow font-light transition-all'}>Projekti</Link>
-                        <Link href={'/usluge'} className={'text-white hover:text-yellow font-light transition-all'}>Usluge</Link>
-                        <Link href={'/o-meni'} className={'text-white hover:text-yellow font-light transition-all'}>O meni</Link>
-                        <Link href={'/kontakt'} className={'text-white hover:text-yellow font-light transition-all'}>Kontakt</Link>
+                        <Link href={'#projects'} className={'text-white hover:text-yellow font-light transition-all'}>Projekti</Link>
+                        <Link href={'#services'} className={'text-white hover:text-yellow font-light transition-all'}>Usluge</Link>
+                        <Link href={'#skills'} className={'text-white hover:text-yellow font-light transition-all'}>Vještine</Link>
+                        <Link href={'#contact'} className={'text-white hover:text-yellow font-light transition-all'}>Kontakt</Link>
                     </div>
             </div>
             <div className={'flex flex-col gap-6 justify-start lg:justify-center items-start lg:items-center w-[100%] lg:w-[24%]'}>

@@ -27,11 +27,11 @@ export default function Home() {
               <AnimatedScrollIcon/>
           </section>
           <InfiniteScroll/>
-          <section id={'projects'} className={'px-4 md:px-16 lg:px-52'}>
-              <h1 className={'w-full text-3xl text-center mt-20 mb-20 lg:mt-40 lg:mb-20'}>Izdvojeni projekti</h1>
+          <section id={'projects'} className={'px-4 md:px-16 pt-20 lg:pt-32 lg:px-52'}>
+              <h1 className={'w-full text-3xl text-center mb-20 lg:mb-20'}>Izdvojeni projekti</h1>
               <div className={'flex lg:flex-row flex-col justify-between gap-20 lg:gap-0 items-start'}>
                   <div className={'flex flex-col justify-start items-start gap-7 lg:p-4 w-full lg:max-w-[40%]'}>
-                      <Link target={'_blank'} className={'w-full'} href={'https://weather-w93p-raianmlns-projects.vercel.app/'}>
+                      <Link target={'_blank'} className={'w-full'} href={'https://vrijeme.raianmelon.com/'}>
                           <Image src={'/weather-project.png'}
                                  className={'opacity-50 hover:opacity-100 transition-all duration-300 rounded-xl w-full'}
                                  alt={'Vrijeme projekt'} width={500} height={200}/>
@@ -39,11 +39,11 @@ export default function Home() {
                       <div className={''}>
                           <h1 className={'text-2xl relative group'}>
                               <Link target={'_blank'}
-                                    href={'https://weather-w93p-raianmlns-projects.vercel.app/'}>Vrijeme</Link>
+                                    href={'https://vrijeme.raianmelon.com/'}>Vrijeme</Link>
                               <Link target={'_blank'} className={'text-sm text-yellow absolute'}
-                                    href={'https://weather-w93p-raianmlns-projects.vercel.app/'}>
+                                    href={'https://vrijeme.raianmelon.com/'}>
                                   <SquareArrowOutUpRight className={'text-yellow absolute -right-5 top-0'} size={16}/>
-                                  <p className={'text-yellow absolute -right-5 pl-1 -top-0.5 opacity-0 group-hover:opacity-100 translate-x-2/3 group-hover:translate-x-full translate-all duration-300'}>vrijeme.tk</p>
+                                  <p className={'text-yellow absolute -right-5 pl-1 -top-0.5 opacity-0 group-hover:opacity-100 translate-x-2/3 group-hover:translate-x-full translate-all duration-300'}>vrijeme.raianmelon.com</p>
                               </Link>
                           </h1>
                       </div>
@@ -54,7 +54,7 @@ export default function Home() {
                           Kod</FilledButton>
                   </div>
                   <div className={'flex flex-col justify-start items-start gap-7 lg:p-4 w-full lg:max-w-[40%]'}>
-                      <Link target={'_blank'} className={'w-full'}  href={'https://trgovina-vtlf-git-master-raianmlns-projects.vercel.app/'}>
+                      <Link target={'_blank'} className={'w-full'}  href={'https://trgovina.raianmelon.com/'}>
                           <Image src={'/shop-project.png'}
                                  className={'opacity-50 hover:opacity-100 w-full transition-all duration-300 rounded-xl'}
                                  alt={'Trgovina projekt'} width={600} height={400}/>
@@ -62,11 +62,11 @@ export default function Home() {
                       <div className={''}>
                           <h1 className={'text-2xl relative group'}>
                               <Link target={'_blank'}
-                                    href={'https://trgovina-vtlf-git-master-raianmlns-projects.vercel.app/'}>Trgovina</Link>
+                                    href={'https://trgovina.raianmelon.com/'}>Trgovina</Link>
                               <Link target={'_blank'} className={'text-sm text-yellow absolute'}
-                                    href={'https://trgovina-vtlf-git-master-raianmlns-projects.vercel.app/'}>
+                                    href={'https://trgovina.raianmelon.com/'}>
                                   <SquareArrowOutUpRight className={'text-yellow absolute -right-5 top-0'} size={16}/>
-                                  <p className={'text-yellow absolute -right-5 pl-1 -top-0.5 opacity-0 group-hover:opacity-100 translate-x-2/3 group-hover:translate-x-full translate-all duration-300'}>trgovina.tk</p>
+                                  <p className={'text-yellow absolute -right-5 pl-1 -top-0.5 opacity-0 group-hover:opacity-100 translate-x-2/3 group-hover:translate-x-full translate-all duration-300'}>trgovina.raianmelon.com</p>
                               </Link>
                           </h1>
                       </div>
@@ -77,8 +77,8 @@ export default function Home() {
                   </div>
               </div>
           </section>
-          <section id={'services'} className={'px-4 md:px-16 lg:px-52'}>
-              <h1 className={'text-3xl mt-20 mb-20 lg:mt-40 lg:mb-20 text-center'}>Usluge</h1>
+          <section id={'services'} className={'px-4 md:px-16 lg:px-52 pt-20 lg:pt-32'}>
+              <h1 className={'text-3xl mb-20 lg:mb-20 text-center'}>Usluge</h1>
               <div className={'flex lg:flex-row flex-col gap-10 lg:gap-0 justify-between'}>
                   <div
                       className={'w-full lg:max-w-[25%] h-fit rounded-xl bg-yellow bg-opacity-80 text-black px-6 py-8 flex flex-col gap-10 justify-center items-center'}>
@@ -106,12 +106,12 @@ export default function Home() {
                   </div>
               </div>
           </section>
-          <section id={'skills'} className={'px-4 md:px-16 lg:px-52'}>
-              <h1 className={'text-3xl mt-20 lg:mt-40'}>Moje Vještine</h1>
-              <div className={'w-full my-20 h-full overflow-hidden'}>
-                  <div className={'flex gap-24 items-center justify-center h-full w-max'}
+          <section id={'skills'} className={'px-4 md:px-16 lg:px-52 py-20 lg:py-32'}>
+              <h1 className={'text-3xl'}>Moje Vještine</h1>
+              <div className={'w-full mt-20 h-full overflow-hidden'}>
+                  <div className={'flex gap-10 lg:gap-24 items-center justify-center h-full w-max'}
                        style={{animation: 'infinite-scroll2 30s linear infinite'}}>
-                      <div className={'flex gap-24 items-center justify-center w-max -z-10'}>
+                      <div className={'flex gap-10 lg:gap-24 items-center justify-center w-max -z-10'}>
                           <Image src={'/html.png'} alt={'html'} width={70} height={70} />
                           <Image src={'/css.png'} alt={'css'} width={70} height={79} />
                           <Image src={'/tailwind.png'} alt={'tailwind'} width={70} height={42} />
@@ -122,7 +122,7 @@ export default function Home() {
                           <Image src={'/nextjs.svg'} alt={'nextjs'} width={70} height={70} />
                           <Image src={'/prisma.png'} alt={'prisma'} width={100} height={41} />
                       </div>
-                      <div className={'w-max flex gap-24 items-center justify-center'}>
+                      <div className={'w-max flex gap-10 lg:gap-24 items-center justify-center'}>
                           <Image src={'/html.png'} alt={'html'} width={70} height={70} />
                           <Image src={'/css.png'} alt={'css'} width={70} height={79} />
                           <Image src={'/tailwind.png'} alt={'tailwind'} width={70} height={42} />
@@ -136,17 +136,17 @@ export default function Home() {
                   </div>
               </div>
           </section>
-          <section id={'contact'} className={'px-4 md:px-16 lg:px-52 my-20'}>
-              <h1 className={'text-3xl text-center w-full mb-20 lg:my-20'}>Kontaktirajte me</h1>
+          <section id={'contact'} className={'px-4 md:px-16 lg:px-52 pt-20 lg:pt-28'}>
+              <h1 className={'text-3xl lg:text-center w-full mb-10'}>Kontaktirajte me</h1>
               <form className={'flex items-start lg:flex-row flex-col justify-between'}>
                   <div className={'flex flex-col gap-5 justify-start items-start my-10'}>
                       <h1 className={'text-xl'}>Raian Melon</h1>
                       <Link target={'_blank'} href={'mailto:raianmelon11@gmail.com'}
                             className={'text-white hover:text-yellow font-light transition-all flex gap-4 justify-center items-center'}><Mail
-                          size={30}/>raianmelon11@gmail.com</Link>
+                          size={30} color={'#FED700'}/>raianmelon11@gmail.com</Link>
                       <Link target={'_blank'} href={'tel:+385919810766'}
                             className={'text-white hover:text-yellow font-light transition-all flex gap-4 justify-center items-center'}><Phone
-                          size={30}/> +385 91 981 0766</Link>
+                          size={30} color={'#FED700'}/> +385 91 981 0766</Link>
                   </div>
                   <div className={'flex flex-col gap-10 justify-start items-start my-10 w-full lg:w-[45%]'}>
                       <div className={'flex gap-5 w-full'}>
