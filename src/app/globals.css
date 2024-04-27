@@ -6,6 +6,11 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --x: 0;
+    --y: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     @keyframes ping {
         from {

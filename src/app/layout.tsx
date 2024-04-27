@@ -24,13 +24,13 @@ export default function RootLayout({
         <meta name="robots" content="noindex, nofollow"/>
     </Head>
     <body className={inter.className + ' bg-background text-white'}>
-        {/*<TitleHandler DefaultTitle={metadata.title}>*/}
+        <TitleHandler DefaultTitle={metadata.title}>
               <NavBar/>
               <main className={'min-h-[calc(100vh-90px)] overflow-x-hidden'}>
                   {children}
               </main>
               <Footer/>
-        {/*</TitleHandler>*/}
+        </TitleHandler>
       </body>
     </html>
   );
