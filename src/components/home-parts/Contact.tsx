@@ -88,23 +88,23 @@ export default function Contact() {
                         <input value={name} onChange={(e) => {
                             setName(e.target.value)
                         }}
-                               className={`w-1/2 text-white bg-background border-b-2 ${errors.find((error) => error.for === "name") ? 'border-red-500' : 'border-white'} px-2 py-2 outline-0 focus:border-yellow transition-all`}
+                               className={`w-1/2 text-white border-r-0 bg-background border-b-2 ${errors.find((error) => error.for === "name") ? 'border-red-500' : 'border-white'} px-2 py-2 outline-0 focus:border-yellow transition-all`}
                                placeholder={'Ime'} type="text"/>
                         <input value={surname} onChange={(e) => {
                             setSurname(e.target.value)
                         }}
-                               className={`w-1/2 text-white bg-background border-b-2 ${errors.find((error) => error.for === "surname") ? 'border-red-500' : 'border-white'} px-2 py-2 outline-0 focus:border-yellow transition-all`}
+                               className={`w-1/2 text-white border-r-0 bg-background border-b-2 ${errors.find((error) => error.for === "surname") ? 'border-red-500' : 'border-white'} px-2 py-2 outline-0 focus:border-yellow transition-all`}
                                placeholder={'Prezime'} type="text"/>
                     </div>
                     <input value={email} onChange={(e) => {
                         setEmail(e.target.value)
                     }}
-                           className={`text-white bg-background border-b-2 ${errors.find((error) => error.for === "email") ? 'border-red-500' : 'border-white'} px-2 py-2 outline-0 focus:border-yellow transition-all w-full`}
+                           className={`text-white border-r-0 bg-background border-b-2 ${errors.find((error) => error.for === "email") ? 'border-red-500' : 'border-white'} px-2 py-2 outline-0 focus:border-yellow transition-all w-full`}
                            placeholder={'E-mail'} type="text"/>
                     <input value={contactReason} onChange={(e) => {
                         setContactReason(e.target.value)
                     }}
-                           className={`text-white bg-background border-b-2 ${errors.find((error) => error.for === "contactReason") ? 'border-red-500' : 'border-white'} px-2 py-2 outline-0 focus:border-yellow transition-all w-full`}
+                           className={`text-white border-r-0 bg-background border-b-2 ${errors.find((error) => error.for === "contactReason") ? 'border-red-500' : 'border-white'} px-2 py-2 outline-0 focus:border-yellow transition-all w-full`}
                            placeholder={'Razlog kontaktiranja'} type="text"/>
                     <textarea value={message} onChange={(e) => {
                         setMessage(e.target.value)
