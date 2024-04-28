@@ -8,11 +8,13 @@ export default function EmailFooter() {
                     justifyContent: "center",
                     alignItems: "center",
                     textDecoration: "none",
-                    color: "#FED700"
+                    color: "#FED700",
+                    gap: '10px'
                 }}>
                     <img src={'https://www.raianmelon.com/logo.png'} width={50} alt='Raian Melon'/>
                     <h2>Raian Melon</h2>
                 </a>
+
             </div>
         </>
     )

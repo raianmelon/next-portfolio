@@ -7,8 +7,8 @@ const projects = [
     {
         id: 1,
         ImageUrl: '/weather-project.png',
-        ImageWidth: 500,
-        ImageHeight: 200,
+        ImageWidth: 640,
+        ImageHeight: 317,
         githubUrl: 'https://github.com/raianmelon/Vrijeme/',
         ProjectSubDomain: 'vrijeme',
         ProjectName: 'Vrijeme',
@@ -17,8 +17,8 @@ const projects = [
     {
         id: 2,
         ImageUrl: '/shop-project.png',
-        ImageWidth: 600,
-        ImageHeight: 400,
+        ImageWidth: 640,
+        ImageHeight: 315,
         githubUrl: 'https://github.com/raianmelon/Trgovina',
         ProjectSubDomain: 'trgovina',
         ProjectName: 'Trgovina',
@@ -28,7 +28,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section id={'projects'} className={'px-4 md:px-16 pt-20 lg:pt-32 lg:px-52'}>
+        <section id={'projects'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 pt-20 lg:pt-32'}>
             <h1 className={'w-full text-3xl text-center mb-20 lg:mb-20'}>Izdvojeni projekti</h1>
             <div className={'flex lg:flex-row flex-col justify-between gap-20 lg:gap-0 items-start'}>
                 {projects.map(({id, ProjectName, ProjectDescription, ProjectSubDomain, githubUrl, ImageUrl, ImageWidth, ImageHeight}) => {

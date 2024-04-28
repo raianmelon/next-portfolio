@@ -38,7 +38,7 @@ export default function Footer() {
             <div className={'flex flex-col gap-6 justify-start items-start w-[100%] lg:max-w-fit'}>
                 <h1 className={'text-white font-semibold text-lg text-start'}>Kontakt</h1>
                 <div className={'flex flex-col gap-6 justify-start items-start'}>
-                    <Link target={'_blank'} href={'mailto:raianmelon11@gmail.com'} className={'text-white hover:text-yellow font-light transition-all flex gap-4'}><Mail/>raianmelon11@gmail.com</Link>
+                    <Link target={'_blank'} href={'mailto:raian@raianmelon.com'} className={'text-white hover:text-yellow font-light transition-all flex gap-4'}><Mail/>raian@raianmelon.com</Link>
                     <Link target={'_blank'} href={'tel:+385919810766'} className={'text-white hover:text-yellow font-light transition-all flex gap-4'}><Phone/> +385 91 981 0766</Link>
                 </div>
             </div>

@@ -2,8 +2,7 @@ import Image from "next/image";
 
 export default function Skills() {
     return (
-        <section id={'skills'} className={'px-4 md:px-16 lg:px-52 py-20 lg:py-32'}>
-            <h1 className={'text-3xl'}>Moje Vještine</h1>
+        <section id={'skills'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 py-20 lg:py-28'}>
             <div className={'w-full mt-20 h-full overflow-hidden'}>
                 <div className={'flex gap-10 lg:gap-24 items-center justify-center h-full w-max'}
                      style={{animation: 'infinite-scroll2 30s linear infinite'}}>
@@ -12,6 +11,7 @@ export default function Skills() {
                         <Image src={'/css.png'} alt={'css'} width={70} height={79}/>
                         <Image src={'/tailwind.png'} alt={'tailwind'} width={70} height={42}/>
                         <Image src={'/javascript.png'} alt={'javascript'} width={70} height={70}/>
+                        <Image src={'/typescript.png'} alt={'typescript'} width={70} height={70}/>
                         <Image src={'/node.png'} alt={'node'} width={70} height={32}/>
                         <Image src={'/svelte.png'} alt={'svelte'} width={70} height={84}/>
                         <Image src={'/react.png'} alt={'react'} width={70} height={61}/>
@@ -23,6 +23,7 @@ export default function Skills() {
                         <Image src={'/css.png'} alt={'css'} width={70} height={79}/>
                         <Image src={'/tailwind.png'} alt={'tailwind'} width={70} height={42}/>
                         <Image src={'/javascript.png'} alt={'javascript'} width={70} height={70}/>
+                        <Image src={'/typescript.png'} alt={'typescript'} width={70} height={70}/>
                         <Image src={'/node.png'} alt={'node'} width={70} height={32}/>
                         <Image src={'/svelte.png'} alt={'svelte'} width={70} height={84}/>
                         <Image src={'/react.png'} alt={'react'} width={70} height={61}/>

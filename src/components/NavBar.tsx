@@ -114,10 +114,10 @@ export default function NavBar() {
             </div>
         </nav>
         {isMenuOpen && (
-            <div className={`fixed top-0 flex flex-col gap-10 z-10 bg-background items-center justify-center text-xl py-20 mb-40 transition-opacity duration-500 w-screen h-[100dvh]`} style={{opacity}}>
+            <div className={`overflow-scroll fixed top-0 flex flex-col gap-10 z-10 bg-background items-center justify-center text-xl py-20 mb-40 transition-opacity duration-500 w-screen h-[100dvh]`} style={{opacity}}>
                 {links.map(({id, link, text, variant}) => (
                     !variant ? (
-                        <div key={id} className={'overflow-hidden'}>
+                        <div key={id}>
                             <NavButton href={link} onClick={toggleMenu} className={'opacity-0 translate-y-full inline-block'} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(id-1)*100}ms`}}>{text}</NavButton>
                         </div>
                     ) : variant === 'filled' ? (

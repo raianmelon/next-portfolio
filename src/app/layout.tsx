@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Raian Melon | Izrada web stranica",
-  // description: "Transformiranje ideja u web stranice.",
+  description: "Transformiranje vaših ideja u web stranice.",
 };
 
 export default function RootLayout({
