@@ -4,7 +4,7 @@ export default function InfiniteScroll() {
     return (
         <section className={'px-4 md:px-10 lg:px-20 text-black text-lg lg:text-xl h-20 w-full bg-yellow opacity-80'}>
             <div className={'w-full h-full overflow-hidden'}>
-                <div className={'flex gap-5 items-center justify-center h-full w-max'} style={{animation: 'infinite-scroll 10s linear', animationTimeline: 'scroll(root)'}}>
+                <div className={'flex gap-5 items-center justify-center h-full w-max'} style={{animation: 'infinite-scroll 40s linear infinite', animationTimeline: 'scroll(root)'}}>
                     <div className={'flex gap-5 items-center justify-center w-max -z-10'}>
                         <Dot size={70} color={'#000'} />
                         <p>Blogovi</p>
