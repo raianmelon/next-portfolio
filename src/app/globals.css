@@ -108,6 +108,11 @@ html {
     background: #FED700;
 }
 
+input{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
 ::-moz-selection {
     color: #122620;
     background: #FED700;
