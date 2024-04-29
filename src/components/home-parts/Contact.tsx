@@ -109,7 +109,7 @@ export default function Contact() {
                     <textarea value={message} onChange={(e) => {
                         setMessage(e.target.value)
                     }}
-                              className={`h-32 text-white bg-background border-2 ${errors.find((error) => error.for === "message") ? 'border-b-red-500' : 'border-b-white'} px-4 py-2 outline-0 focus:border-yellow transition-all w-full rounded-md`}
+                              className={`h-32 text-white bg-background border-2 ${errors.find((error) => error.for === "message") ? 'border-red-500' : 'border-white'} px-4 py-2 outline-0 focus:border-yellow transition-all w-full rounded-md`}
                               placeholder={'Poruka'}/>
                     {responseMessage &&
                         <p className={`text-white rounded-md ${responseMessageStatus == 200 ? 'bg-[#298c43] border-[#298c43]' : 'border-[#8c2929] bg-[#8c2929]'} bg-opacity-30 border-2 px-4 py-3 w-full`}>
