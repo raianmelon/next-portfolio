@@ -4,6 +4,7 @@ import {Mail, Phone} from "lucide-react";
 import axios from "axios";
 import {useState} from "react";
 import {z} from "zod";
+import {NavButton} from "@/components/NavBar";
 
 export default function Contact() {
     const [isLoading, setIsLoading] = useState(false);
@@ -72,14 +73,12 @@ export default function Contact() {
     return (
         <section id={'contact'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 py-20 lg:py-28'}>
             <div className={'flex items-start lg:flex-row flex-col justify-between'}>
-                <div className={'text-xl flex flex-col gap-5 justify-center items-start h-full my-10'}>
-                    <h1 className={'text-2xl mb-2'}>Raian Melon</h1>
-                    <Link target={'_blank'} href={'mailto:raian@raianmelon.com'}
-                          className={'text-white hover:text-yellow font-light transition-all flex gap-4 justify-center items-center'}><Mail
-                        size={30} color={'#FED700'}/>raian@raianmelon.com</Link>
-                    <Link target={'_blank'} href={'tel:+385919810766'}
-                          className={'text-white hover:text-yellow font-light transition-all flex gap-4 justify-center items-center'}><Phone
-                        size={30} color={'#FED700'}/> +385 91 981 0766</Link>
+                <div className={'text-lg flex flex-col gap-5 justify-center items-start h-full my-10'}>
+                    <h1 className={'text-xl mb-2'}>Raian Melon</h1>
+                    <NavButton className={'mb-2 text-white hover:text-yellow font-light transition-all flex gap-4 justify-center items-center'} target={'_blank'} href={'mailto:raian@raianmelon.com'}><Mail
+                        size={30} color={'#FED700'}/> raian@raianmelon.com</NavButton>
+                    <NavButton className={'text-white hover:text-yellow font-light transition-all flex gap-4 justify-center items-center'} target={'_blank'} href={'tel:+385919810766'}><Phone
+                        size={30} color={'#FED700'}/> +385 91 981 0766</NavButton>
                 </div>
                 <form onSubmit={sendEmail}
                       className={'flex flex-col gap-10 justify-start items-start my-10 w-full lg:w-[45%]'}>

@@ -130,8 +130,8 @@ export default function NavBar() {
     </>
     )
 }
-export function NavButton ({children, href, className, style, onClick}: {children: React.ReactNode, href: string, className?: string, style?:object , onClick?: any}) {
+export function NavButton ({children, href, target, className, style, onClick}: {children: React.ReactNode, href: string, target?: string, className?: string, style?:object , onClick?: any}) {
     return (
-        <Link href={href} onClick={onClick} className={`after:content-[""] text-white after:block relative after:absolute after:-bottom-2 after:w-0 after:left-0 hover:after:w-full after:transition-all after:duration-500 after:h-0.5 after:bg-yellow ${className}`} style={style}>{children}</Link>
+        <Link href={href} target={target} onClick={onClick} className={`after:content-[""] text-white after:block relative after:absolute after:-bottom-2 after:w-0 after:left-0 hover:after:w-full after:transition-all after:duration-500 after:h-0.5 after:bg-yellow ${className}`} style={style}>{children}</Link>
     )
 }
