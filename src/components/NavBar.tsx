@@ -8,6 +8,37 @@ export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMenuOpenWithNoDelay, setIsMenuOpenWithNoDelay] = useState(false);
     const [opacity, setOpacity] = useState(0)
+    const [activeSection, setActiveSection] = useState<string>('');
+
+    const handleScroll = () => {
+        console.log('handlescroll')
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPosition = window.scrollY + 300; // Adjust this value for better accuracy
+
+        sections.forEach((section) => {
+            //@ts-ignore
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition < sectionTop + sectionHeight
+            ) {
+                let sectionName = String(section.id)
+                setActiveSection(sectionName)
+            }
+        });
+    };
+
+    useEffect(() => {
+        handleScroll()
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [activeSection]);
+
+    window.addEventListener('load', handleScroll);
+    window.removeEventListener('load', handleScroll)
 
     const links = [
         {
@@ -106,9 +137,9 @@ export default function NavBar() {
             <div className={`hidden lg:flex gap-10 items-center`}>
                 {links.map(({id, link, text, variant}) => (
                     !variant ? (
-                        <NavButton key={id} href={link}>{text}</NavButton>
+                        <NavButton className={ activeSection === link.substring(1) ? 'after:content-[""] after:block relative after:absolute after:-bottom-2 after:left-0 after:w-full after:transition-all after:duration-500 after:h-0.5 after:bg-yellow' : '' } key={id} href={link}>{text}</NavButton>
                     ) : variant === 'filled' ? (
-                        <FilledButtonWithOutline key={id} href={link} className={'ml-5'}>{text}</FilledButtonWithOutline>
+                        <FilledButtonWithOutline className={ activeSection === link.substring(1) ? 'bg-yellow text-black ml-5' : 'ml-5' } key={id} href={link}>{text}</FilledButtonWithOutline>
                     ) : null
                 ))}
             </div>

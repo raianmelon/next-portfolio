@@ -1,9 +1,10 @@
 import Image from "next/image";
+import {AnimatedElement} from "@/components/AnimatedElement";
 
 export default function Skills() {
     return (
         <section id={'skills'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 py-20 lg:py-28'}>
-            <div className={'w-full mt-20 h-full overflow-hidden'}>
+            <AnimatedElement className={'w-full mt-20 h-full overflow-hidden'}>
                 <div className={'flex gap-10 lg:gap-24 items-center justify-center h-full w-max'}
                      style={{animation: 'infinite-scroll2 30s linear infinite'}}>
                     <div className={'flex gap-10 lg:gap-24 items-center justify-center w-max -z-10'}>
@@ -31,7 +32,7 @@ export default function Skills() {
                         <Image src={'/prisma.png'} alt={'prisma'} width={100} height={41}/>
                     </div>
                 </div>
-            </div>
+            </AnimatedElement>
         </section>
     )
 }
