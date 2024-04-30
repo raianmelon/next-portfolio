@@ -72,7 +72,7 @@ export default function Contact() {
     }
 
     return (
-        <section id={'contact'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 py-20 lg:py-28'}>
+        <section id={'contact'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 pb-10 lg:py-28'}>
             <AnimatedElement className={'flex items-start lg:flex-row flex-col justify-between'}>
                 <div className={'text-lg flex flex-col gap-5 justify-center items-start h-full my-10'}>
                     <AnimatedHeading className={'text-xl mb-2'}>Raian Melon</AnimatedHeading>

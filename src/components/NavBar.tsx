@@ -11,7 +11,6 @@ export default function NavBar() {
     const [activeSection, setActiveSection] = useState<string>('');
 
     const handleScroll = () => {
-        console.log('handlescroll')
         const sections = document.querySelectorAll('section[id]');
         const scrollPosition = window.scrollY + 300; // Adjust this value for better accuracy
 

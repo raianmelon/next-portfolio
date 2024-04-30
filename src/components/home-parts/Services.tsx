@@ -5,7 +5,7 @@ export default function Services() {
 
     return (
         <section id={'services'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 pt-20 lg:pt-32'}>
-            <AnimatedHeading className={'text-3xl mb-20 lg:mb-20 text-center'}>Usluge</AnimatedHeading>
+            <AnimatedHeading className={'text-3xl mb-10 lg:mb-20 text-center'}>Usluge</AnimatedHeading>
             <AnimatedElement className={'flex lg:flex-row flex-col gap-10 lg:gap-0 justify-between'}>
                 <div
                     className={'w-full lg:max-w-[25%] h-fit rounded-xl bg-yellow bg-opacity-80 hover:bg-opacity-100 transition-all text-black px-6 py-8 flex flex-col gap-10 justify-center items-center'}>
