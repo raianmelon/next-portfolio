@@ -37,8 +37,11 @@ export default function NavBar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [activeSection]);
 
-    window.addEventListener('load', handleScroll);
-    window.removeEventListener('load', handleScroll)
+    useEffect(() => {
+        window.addEventListener('load', handleScroll);
+        window.removeEventListener('load', handleScroll)
+    })
+
 
     const links = [
         {
