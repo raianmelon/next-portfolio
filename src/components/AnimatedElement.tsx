@@ -10,7 +10,7 @@ export const AnimatedElement = ({ children, className }: {children: React.ReactN
     };
 
     return (
-        <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={0.4}>
+        <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={0.8}>
             <div
                 className={`opacity-0 text-white inline-block ${className}`}
                 style={isVisible ? { animation: 'popupword 0.5s forwards' } : {}}
@@ -29,7 +29,7 @@ export const AnimatedHeading = ({ children, className }: {children: React.ReactN
     };
 
     return (
-        <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={0.4}>
+        <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={0.8}>
             <h1
                 className={`opacity-0 text-white inline-block  translate-y-full ${className}`}
                 style={isVisible ? { animation: 'popupword 0.5s forwards' } : {}}
