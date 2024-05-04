@@ -117,3 +117,27 @@ input{
     color: #122620;
     background: #FED700;
 }
+
+.swiper-pagination-progressbar-fill {
+    background-color: #FED700 !important;
+}
+
+.swiper-pagination-progressbar {
+    background: transparent !important;
+}
+
+.swiper {
+    overflow: visible !important;
+}
+
+.swiper-slide-next {
+    opacity: .5 !important;
+}
+
+.swiper-slide-prev {
+    opacity: .5 !important;
+}
+
+.swiper-button-disabled {
+    opacity: .5;
+}
