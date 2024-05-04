@@ -126,8 +126,10 @@ input{
     background: transparent !important;
 }
 
-.swiper {
-    overflow: visible !important;
+@media (width > 1024px) {
+    .swiper {
+        overflow: visible !important;
+    }
 }
 
 .swiper-slide-next {

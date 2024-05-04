@@ -12,8 +12,8 @@ import {FilledButtonWithOutline} from "@/components/Buttons";
 export default function Services() {
     return (
         <section id={'services'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 pt-20 lg:pt-32'}>
-            <div className={'flex justify-between items-center'}>
-                <AnimatedHeading className={'text-3xl mb-10 lg:mb-20'}>Usluge</AnimatedHeading>
+            <div className={'flex justify-between items-center mb-10 lg:mb-20'}>
+                <AnimatedHeading className={'text-3xl'}>Usluge</AnimatedHeading>
                 <div className={'flex justify-center items-center gap-4'}>
                     <ArrowLeft className="arrow-left cursor-pointer tranisiton-all duration-150 hover:opacity-50" />
                     <ArrowRight className="arrow-right cursor-pointer tranisiton-all duration-150 hover:opacity-50" />
@@ -26,7 +26,7 @@ export default function Services() {
                 modules={[Navigation]}
             >
                 <SwiperSlide>
-                    <div className={'flex justify-between items-start gap-20'}>
+                    <div className={'flex lg:flex-row flex-col justify-between items-start gap-10 lg:gap-20'}>
                         <div
                             className={'w-full lg:max-w-[50%] rounded-xl py-8 flex flex-col gap-10 justify-start items-start'}>
                             <div className={'flex flex-col gap-5 justify-start items-start'}>
@@ -45,13 +45,13 @@ export default function Services() {
                                 pretvorimo u stvarnost na webu.</p>
                             <FilledButtonWithOutline href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
                         </div>
-                        <div className={'w-1/2'}>
+                        <div className={'w-full lg:w-1/2'}>
                             <Image className={'rounded-md'} src={'/design-code.png'} alt={'Web stranica i dizajn'} width={828} height={447}/>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className={'flex justify-between items-start gap-20'}>
+                    <div className={'flex lg:flex-row flex-col justify-between items-start gap-10 lg:gap-20'}>
                         <div
                             className={'w-full lg:max-w-[50%] rounded-xl py-8 flex flex-col gap-10 justify-start items-start'}>
                             <div className={'flex flex-col gap-5 justify-start items-start'}>
@@ -66,14 +66,14 @@ export default function Services() {
                                 ciljevima.</p>
                             <FilledButtonWithOutline href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
                         </div>
-                        <div className={'w-1/2'}>
+                        <div className={'w-full lg:w-1/2'}>
                             <Image className={'rounded-md'} src={'/design.png'} alt={'Samo dizajn'}
                                    width={828} height={447}/>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className={'flex justify-between items-start gap-20'}>
+                    <div className={'flex lg:flex-row flex-col justify-between items-start gap-10 lg:gap-20'}>
                         <div
                             className={'w-full lg:max-w-[50%] rounded-xl py-8 flex flex-col gap-10 justify-start items-start'}>
                             <div className={'flex flex-col gap-5 justify-start items-start'}>
@@ -88,7 +88,7 @@ export default function Services() {
                             <FilledButtonWithOutline href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
 
                         </div>
-                        <div className={'w-1/2'}>
+                        <div className={'w-full lg:w-1/2'}>
                             <Image className={'rounded-md'} src={'/coding.png'} alt={'Samo web stranica'}
                                    width={828} height={447}/>
                         </div>
