@@ -43,7 +43,7 @@ export default function Services() {
                                 dizajn, SEO optimizaciji i korisničkom iskustvu. Kontaktirajte me i dopustite mi da vašu
                                 viziju
                                 pretvorimo u stvarnost na webu.</p>
-                            <FilledButtonWithOutline href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
+                            <FilledButtonWithOutline className={'ml-0.5 lg:ml-0'} href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
                         </div>
                         <div className={'w-full lg:w-1/2'}>
                             <Image className={'rounded-md'} src={'/design-code.png'} alt={'Web stranica i dizajn'} width={828} height={447}/>
@@ -64,7 +64,7 @@ export default function Services() {
                                 sučelja i
                                 iskustva (UI/UX) osigurava intuitivnost, privlačnost i prilagođenost vašim
                                 ciljevima.</p>
-                            <FilledButtonWithOutline href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
+                            <FilledButtonWithOutline className={'ml-0.5 lg:ml-0'} href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
                         </div>
                         <div className={'w-full lg:w-1/2'}>
                             <Image className={'rounded-md'} src={'/design.png'} alt={'Samo dizajn'}
@@ -85,7 +85,7 @@ export default function Services() {
                                 korisnika
                                 omogućuje vam brzo pokretanje online prisutnosti s minimalnim naporom. Koristeći vaš
                                 pripremljeni dizajn, stvaram web stranicu koja odražava vaš brend i identitet.</p>
-                            <FilledButtonWithOutline href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
+                            <FilledButtonWithOutline className={'ml-0.5 lg:ml-0'} href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
 
                         </div>
                         <div className={'w-full lg:w-1/2'}>
