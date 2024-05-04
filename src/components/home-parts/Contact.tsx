@@ -1,11 +1,10 @@
 'use client'
-import Link from "next/link";
 import {Mail, Phone} from "lucide-react";
 import axios from "axios";
 import {useState} from "react";
 import {z} from "zod";
 import {NavButton} from "@/components/NavBar";
-import {AnimatedElement, AnimatedHeading} from "@/components/AnimatedElement";
+import {AnimatedHeading} from "@/components/AnimatedElement";
 
 export default function Contact() {
     const [isLoading, setIsLoading] = useState(false);
@@ -73,7 +72,7 @@ export default function Contact() {
 
     return (
         <section id={'contact'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 pb-10 lg:py-28'}>
-            <AnimatedElement className={'flex items-start lg:flex-row flex-col justify-between'}>
+            <div className={'flex items-start lg:flex-row flex-col justify-between'}>
                 <div className={'text-lg flex flex-col gap-5 justify-center items-start h-full my-10'}>
                     <AnimatedHeading className={'text-xl mb-2'}>Raian Melon</AnimatedHeading>
                     <NavButton className={'mb-2 text-white hover:text-yellow font-light transition-all flex gap-4 justify-center items-center'} target={'_blank'} href={'mailto:raian@raianmelon.com'}><Mail
@@ -119,7 +118,7 @@ export default function Contact() {
                     <button type='submit' disabled={isLoading}
                             className={'w-full py-2.5 ring-yellow bg-yellow hover:bg-transparent transition-all duration-500 hover:text-white text-black ring-[1.5px] px-4 rounded-md'}>{isLoading ? 'Slanje E-maila...' : 'Pošalji E-mail'}</button>
                 </form>
-            </AnimatedElement>
+            </div>
         </section>
     )
 }

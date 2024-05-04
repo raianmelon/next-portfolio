@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {Github, SquareArrowOutUpRight} from "lucide-react";
 import {FilledButton} from "@/components/Buttons";
-import {AnimatedElement, AnimatedHeading} from "@/components/AnimatedElement";
+import {AnimatedHeading} from "@/components/AnimatedElement";
 
 const projects = [
     {
@@ -31,7 +31,7 @@ export default function Projects() {
     return (
         <section id={'projects'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 pt-20 lg:pt-32'}>
             <AnimatedHeading className={'w-full text-3xl text-center mb-20 lg:mb-20'}>Izdvojeni projekti</AnimatedHeading>
-            <AnimatedElement>
+            <div>
                 <div className={'flex lg:flex-row flex-col justify-between gap-20 lg:gap-0 items-start'}>
                     {projects.map(({
                                        id,
@@ -74,7 +74,7 @@ export default function Projects() {
                         }
                     )}
                 </div>
-            </AnimatedElement>
+            </div>
         </section>
     )
 }

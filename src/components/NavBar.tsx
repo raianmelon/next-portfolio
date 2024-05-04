@@ -112,7 +112,7 @@ export default function NavBar() {
     return (
         <>
         <nav className={'fixed top-0 z-50 w-full px-4 md:px-16 py-4 flex justify-between items-center border-b-2 border-b-dark-green border-opacity-95 backdrop-blur-sm bg-background bg-opacity-95'}>
-            <Link href={'/'} onClick={() => {
+            <Link href={'#home'} onClick={() => {
                 setIsMenuOpen(false)
                 setIsMenuOpenWithNoDelay(false)
             }} className={'flex justify-center items-center gap-5'}>
