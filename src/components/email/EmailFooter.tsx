@@ -9,12 +9,10 @@ export default function EmailFooter() {
                     alignItems: "center",
                     textDecoration: "none",
                     color: "#FED700",
-                    gap: '10px'
                 }}>
-                    <img src={'https://www.raianmelon.com/logo.png'} width={50} alt='Raian Melon'/>
-                    <h2>Raian Melon</h2>
+                    <img src={'https://www.raianmelon.com/logo.png'} width={50} height={50} alt='Raian Melon'/>
+                    <h2 style={{marginLeft: '10px'}} >Raian Melon</h2>
                 </a>
-
             </div>
         </>
     )

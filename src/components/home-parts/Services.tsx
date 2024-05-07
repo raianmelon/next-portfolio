@@ -15,8 +15,8 @@ export default function Services() {
             <div className={'flex justify-between items-center mb-10 lg:mb-20'}>
                 <AnimatedHeading className={'text-3xl'}>Usluge</AnimatedHeading>
                 <div className={'flex justify-center items-center gap-4'}>
-                    <ArrowLeft className="arrow-left cursor-pointer tranisiton-all duration-150 hover:opacity-50" />
-                    <ArrowRight className="arrow-right cursor-pointer tranisiton-all duration-150 hover:opacity-50" />
+                    <ArrowLeft className="arrow-left cursor-pointer tranisiton-all duration-150 hover:opacity-70" />
+                    <ArrowRight className="arrow-right cursor-pointer tranisiton-all duration-150 hover:opacity-70" />
                 </div>
             </div>
             <Swiper

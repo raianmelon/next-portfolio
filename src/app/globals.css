@@ -143,3 +143,7 @@ input{
 .swiper-button-disabled {
     opacity: .5;
 }
+
+.swiper-button-disabled:hover {
+    opacity: .5 !important;
+}

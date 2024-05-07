@@ -1,4 +1,4 @@
-import {Dot} from "lucide-react";
+    import {Dot} from "lucide-react";
 
 export default function InfiniteScroll() {
     return (

@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import {EmailAdminTemplate} from "@/components/email/EmailAdminTemplate";
+import {EmailCustomerTemplate} from "@/components/email/EmailCustomerTemplate";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -18,8 +19,8 @@ export async function POST(req: Request) {
             const dataCustomer = await resend.emails.send({
                 from: 'no-reply@raianmelon.com',
                 to: email,
-                subject: contactReason,
-                react: EmailAdminTemplate({name, surname, email, message}),
+                subject: 'Vaš e-mail je uspješno poslan!',
+                react: EmailCustomerTemplate({name}),
             });
             const responseCustomer = Response.json(dataCustomer);
 
