@@ -46,28 +46,28 @@ export default function NavBar() {
         {
             id: 1,
             text: "Pocetna",
-            link: "#home"
+            link: "/#home"
         },
         {
             id: 2,
             text: "Projekti",
-            link: "#projects"
+            link: "/#projects"
         },
         {
             id: 3,
             text: "Usluge",
-            link: "#services"
+            link: "/#services"
         },
         {
             id: 4,
             text: "Vještine",
-            link: "#skills"
+            link: "/#skills"
         },
         {
             id: 5,
             variant: "filled",
             text: "Kontakt",
-            link: "#contact"
+            link: "/#contact"
         },
     ];
 
@@ -112,7 +112,7 @@ export default function NavBar() {
     return (
         <>
         <nav className={'fixed top-0 z-50 w-full px-4 md:px-16 py-4 flex justify-between items-center border-b-2 border-b-dark-green border-opacity-95 backdrop-blur-sm bg-background bg-opacity-95'}>
-            <Link href={'#home'} onClick={() => {
+            <Link href={'/#home'} onClick={() => {
                 setIsMenuOpen(false)
                 setIsMenuOpenWithNoDelay(false)
             }} className={'flex justify-center items-center gap-5'}>
