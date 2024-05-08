@@ -45,7 +45,7 @@ export default function NavBar() {
     const links = [
         {
             id: 1,
-            text: "Pocetna",
+            text: "Početna",
             link: "/#home"
         },
         {
