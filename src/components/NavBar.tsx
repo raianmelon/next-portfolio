@@ -23,7 +23,7 @@ export default function NavBar() {
                 scrollPosition >= sectionTop &&
                 scrollPosition < sectionTop + sectionHeight
             ) {
-                let sectionName = String(section.id)
+                let sectionName = `/#${String(section.id)}`
                 setActiveSection(sectionName)
             }
         });
@@ -139,9 +139,9 @@ export default function NavBar() {
             <div className={`hidden lg:flex gap-10 items-center`}>
                 {links.map(({id, link, text, variant}) => (
                     !variant ? (
-                        <NavButton className={ activeSection === link.substring(1) ? 'after:content-[""] after:block relative after:absolute after:-bottom-2 after:left-0 after:w-full after:transition-all after:duration-500 after:h-0.5 after:bg-yellow' : '' } key={id} href={link}>{text}</NavButton>
+                        <NavButton className={ activeSection === link ? 'after:content-[""] after:block relative after:absolute after:-bottom-2 after:left-0 after:w-full after:transition-all after:duration-500 after:h-0.5 after:bg-yellow' : '' } key={id} href={link}>{text}</NavButton>
                     ) : variant === 'filled' ? (
-                        <FilledButtonWithOutline className={ activeSection === link.substring(1) ? 'bg-yellow text-black ml-5' : 'ml-5' } key={id} href={link}>{text}</FilledButtonWithOutline>
+                        <FilledButtonWithOutline className={ activeSection === link ? 'bg-yellow text-black ml-5' : 'ml-5' } key={id} href={link}>{text}</FilledButtonWithOutline>
                     ) : null
                 ))}
             </div>
