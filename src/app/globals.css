@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    scroll-behavior: smooth;
-}
-
-:root {
-    --x: 0;
-    --y: 0;
-}
-
 @media (prefers-reduced-motion: no-preference) {
     @keyframes ping {
         from {
@@ -66,6 +57,12 @@ html {
     }
 }
 
+@media (width > 1024px) {
+    .swiper {
+        overflow: visible !important;
+    }
+}
+
 @keyframes popupword {
     100% {
         transform: translateZ(0);
@@ -83,6 +80,10 @@ html {
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -103,6 +104,11 @@ html {
     background: #FED700;
 }
 
+::-moz-selection {
+    color: #122620;
+    background: #FED700;
+}
+
 ::selection {
     color: #122620;
     background: #FED700;
@@ -111,33 +117,6 @@ html {
 input{
     -webkit-appearance: none;
     -webkit-border-radius: 0;
-}
-
-::-moz-selection {
-    color: #122620;
-    background: #FED700;
-}
-
-.swiper-pagination-progressbar-fill {
-    background-color: #FED700 !important;
-}
-
-.swiper-pagination-progressbar {
-    background: transparent !important;
-}
-
-@media (width > 1024px) {
-    .swiper {
-        overflow: visible !important;
-    }
-}
-
-.swiper-slide-next {
-    opacity: .5 !important;
-}
-
-.swiper-slide-prev {
-    opacity: .5 !important;
 }
 
 .swiper-button-disabled {

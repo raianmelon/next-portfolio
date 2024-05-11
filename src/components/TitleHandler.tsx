@@ -6,7 +6,7 @@ const TabVisibilityHandler = ({ children, DefaultTitle }: {children: React.React
     useEffect(() => {
         const handleVisibilityChange = () => {
             DefaultTitle = String(DefaultTitle)
-            document.title = document.hidden ? 'Vratite se na moj portfolio!' : DefaultTitle ? DefaultTitle : 'Raian Melon | Izrada web stranica';
+            document.title = document.hidden ? 'Vratite se na moj portfolio!' : DefaultTitle;
         };
         document.addEventListener('visibilitychange', handleVisibilityChange);
         return () => {
