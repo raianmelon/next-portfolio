@@ -52,21 +52,12 @@ export default function Projects() {
                                                className={'-z-10 opacity-50 hover:opacity-100 transition-all duration-300 rounded-xl w-full'}
                                                alt={`${ProjectName} projekt`} width={ImageWidth} height={ImageHeight}/>
                                     </Link>
-                                    <div className={''}>
-                                        <h1 className={'text-2xl relative group'}>
-                                            <Link target={'_blank'}
-                                                  href={`https://${ProjectSubDomain}.raianmelon.com/`}>{ProjectName}</Link>
-                                            <Link target={'_blank'} className={'text-sm text-yellow absolute'}
-                                                  href={`https://${ProjectSubDomain}.raianmelon.com/`}>
-                                                <SquareArrowOutUpRight className={'text-yellow absolute -right-5 top-0'}
-                                                                       size={16}/>
-                                                <p className={'text-yellow absolute -right-5 pl-1 -top-0.5 opacity-0 group-hover:opacity-100 translate-x-2/3 group-hover:translate-x-full translate-all duration-300'}>{ProjectSubDomain}.raianmelon.com</p>
-                                            </Link>
-                                        </h1>
-                                    </div>
-                                    <h1>Web aplikacija koja pomoću lokacije uredaja ili pretraživanja može pratiti
-                                        temperaturu, vrstu
-                                        oblaka i brzinu vjetra za bilo koji grad iz Svijeta!</h1>
+                                    <Link className={'group text-2xl flex gap-1.5 overflow-hidden project-name'} target={'_blank'} href={`https://${ProjectSubDomain}.raianmelon.com/`}>
+                                        {ProjectName}
+                                        <SquareArrowOutUpRight className={'text-yellow'} size={16}/>
+                                        <p className={'text-yellow text-sm'}>{ProjectSubDomain}.raianmelon.com</p>
+                                    </Link>
+                                    <h2 className={'font-light'}>{ProjectDescription}</h2>
                                     <FilledButton className={'flex gap-3 py-2'} target={'_blank'}
                                                   href={githubUrl}><Github/> Pogledajte Kod</FilledButton>
                                 </div>

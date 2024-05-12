@@ -13,6 +13,12 @@ import {useState} from "react";
 export default function Services() {
     const [currentSlide, setCurrentSlide] = useState<number>(0);
 
+    const HandleClick = (newValue: string) => {
+        let ContactReasonInput = document.querySelector("input#contact-reason");
+        //@ts-ignore
+        ContactReasonInput.value = newValue
+    }
+
     return (
         <section id={'services'} className={'px-4 md:px-16 xl:px-32 2xl:px-52 pt-20 lg:pt-32'}>
             <div className={'flex justify-between items-center mb-10 lg:mb-20'}>
@@ -30,7 +36,7 @@ export default function Services() {
                 onSlideChange={(e) => setCurrentSlide(e.activeIndex)}
             >
                 <SwiperSlide className={`mr-[100px] ${currentSlide !== 0 && 'opacity-50'}`}>
-                    <div className={'flex lg:flex-row flex-col justify-between items-start gap-10 lg:gap-20'}>
+                    <div className={'flex lg:flex-row flex-col justify-between items-center gap-10 lg:gap-20'}>
                         <div
                             className={'w-full lg:max-w-[50%] rounded-xl py-8 flex flex-col gap-10 justify-start items-start'}>
                             <div className={'flex flex-col gap-5 justify-start items-start'}>
@@ -47,7 +53,7 @@ export default function Services() {
                                 dizajn, SEO optimizaciji i korisničkom iskustvu. Kontaktirajte me i dopustite mi da vašu
                                 viziju
                                 pretvorimo u stvarnost na webu.</p>
-                            <FilledButtonWithOutline className={'ml-0.5 lg:ml-0 opacity-0 inline-block translate-y-full transition-all'} style={{animation: currentSlide === 0 ? 'popupword 1s forwards' : ''}} href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
+                            <FilledButtonWithOutline onClick={() => HandleClick('Web stranica + Web Dizajn')} className={'ml-0.5 lg:ml-0 opacity-0 inline-block translate-y-full transition-all'} style={{animation: currentSlide === 0 ? 'popupword 1s forwards' : ''}} href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
                         </div>
                         <div className={'w-full lg:w-1/2'}>
                             <Image className={'rounded-md'} src={'/design-code.png'} alt={'Web stranica i dizajn'} width={828} height={447}/>
@@ -55,7 +61,7 @@ export default function Services() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={`mr-[100px] ${currentSlide !== 1 && 'opacity-50'}`}>
-                    <div className={'flex lg:flex-row flex-col justify-between items-start gap-10 lg:gap-20'}>
+                    <div className={'flex lg:flex-row flex-col justify-between items-center gap-10 lg:gap-20'}>
                         <div
                             className={'w-full lg:max-w-[50%] rounded-xl py-8 flex flex-col gap-10 justify-start items-start'}>
                             <div className={'flex flex-col gap-5 justify-start items-start'}>
@@ -68,7 +74,7 @@ export default function Services() {
                                 sučelja i
                                 iskustva (UI/UX) osigurava intuitivnost, privlačnost i prilagođenost vašim
                                 ciljevima.</p>
-                            <FilledButtonWithOutline className={'ml-0.5 lg:ml-0 opacity-0 inline-block translate-y-full transition-all'} style={{animation: currentSlide === 1 ? 'popupword 1s forwards' : ''}} href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
+                            <FilledButtonWithOutline onClick={() => HandleClick('Web dizajn')} className={'ml-0.5 lg:ml-0 opacity-0 inline-block translate-y-full transition-all'} style={{animation: currentSlide === 1 ? 'popupword 1s forwards' : ''}} href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
                         </div>
                         <div className={'w-full lg:w-1/2'}>
                             <Image className={'rounded-md'} src={'/design.png'} alt={'Samo dizajn'}
@@ -77,7 +83,7 @@ export default function Services() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={`mr-[100px] ${currentSlide !== 2 && 'opacity-50'}`}>
-                    <div className={'flex lg:flex-row flex-col justify-between items-start gap-10 lg:gap-20'}>
+                    <div className={'flex lg:flex-row flex-col justify-between items-center gap-10 lg:gap-20'}>
                         <div
                             className={'w-full lg:max-w-[50%] rounded-xl py-8 flex flex-col gap-10 justify-start items-start'}>
                             <div className={'flex flex-col gap-5 justify-start items-start'}>
@@ -89,7 +95,7 @@ export default function Services() {
                                 korisnika
                                 omogućuje vam brzo pokretanje online prisutnosti s minimalnim naporom. Koristeći vaš
                                 pripremljeni dizajn, stvaram web stranicu koja odražava vaš brend i identitet.</p>
-                            <FilledButtonWithOutline className={'ml-0.5 lg:ml-0 opacity-0 inline-block translate-y-full transition-all'} style={{animation: currentSlide === 2 ? 'popupword 1s forwards' : ''}} href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
+                            <FilledButtonWithOutline onClick={() => HandleClick('Web stranica')} className={'ml-0.5 lg:ml-0 opacity-0 inline-block translate-y-full transition-all'} style={{animation: currentSlide === 2 ? 'popupword 1s forwards' : ''}} href={'#contact'}>Pošaljite upit</FilledButtonWithOutline>
 
                         </div>
                         <div className={'w-full lg:w-1/2'}>

@@ -77,6 +77,60 @@
     }
 }
 
+.project-name p {
+    opacity: 0;
+}
+
+.project-name:hover {
+    p {
+        animation: popupurl-hover 200ms ease-in forwards;
+        opacity: 100;
+        transition: all 200ms ease-in;
+    }
+}
+
+.project-name:not(:hover) {
+    p {
+        opacity: 0;
+        transition: all 200ms ease-out;
+        animation: popupurl-unhover 200ms ease-out forwards;
+    }
+}
+
+@keyframes popupurl-hover {
+    0% {
+        height: 0;
+        width: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        height: fit-content;
+        width: fit-content;
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes popupurl-unhover {
+    0% {
+        height: fit-content;
+        width: fit-content;
+        transform: translateY(-2px);
+    }
+
+    99% {
+        height: fit-content;
+        width: fit-content;
+        transform: translateY(15px);
+    }
+
+    100% {
+        height: 0;
+        width: 0;
+        transform: translateY(15px);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

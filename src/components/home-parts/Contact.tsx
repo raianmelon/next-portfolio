@@ -1,7 +1,7 @@
 'use client'
 import {Mail, Phone} from "lucide-react";
 import axios from "axios";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {z} from "zod";
 import {NavButton} from "@/components/NavBar";
 import {AnimatedHeading} from "@/components/AnimatedElement";
@@ -16,6 +16,7 @@ export default function Contact() {
     const [surname, setSurname] = useState<string>('')
     const [email, setEmail] = useState<string>('')
     const [contactReason, setContactReason] = useState<string>('')
+
     const [message, setMessage] = useState<string>('')
 
     const [errors, setErrors] = useState<any[]>([]);
@@ -100,11 +101,12 @@ export default function Contact() {
                     }}
                            className={`text-white border-r-0 bg-background border-b-2 ${errors.find((error) => error.for === "email") ? 'border-b-red-500' : 'border-b-white'} px-2 py-2 outline-0 focus:border-yellow transition-all w-full`}
                            placeholder={'E-mail'} type="text"/>
+
                     <input value={contactReason} onChange={(e) => {
                         setContactReason(e.target.value)
                     }}
                            className={`text-white border-r-0 bg-background border-b-2 ${errors.find((error) => error.for === "contactReason") ? 'border-b-red-500' : 'border-b-white'} px-2 py-2 outline-0 focus:border-yellow transition-all w-full`}
-                           placeholder={'Razlog kontaktiranja'} type="text"/>
+                           placeholder={'Razlog kontaktiranja'} id={'contact-reason'} type="text"/>
                     <textarea value={message} onChange={(e) => {
                         setMessage(e.target.value)
                     }}
