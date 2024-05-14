@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import {Github, SquareArrowOutUpRight} from "lucide-react";
+import {Eye, Github, SquareArrowOutUpRight} from "lucide-react";
 import {FilledButton} from "@/components/Buttons";
 import {AnimatedHeading} from "@/components/AnimatedElement";
 
@@ -46,11 +46,14 @@ export default function Projects() {
                             return (
                                 <div key={id}
                                      className={'flex flex-col justify-start items-start gap-7 lg:p-4 w-full lg:max-w-[40%]'}>
-                                    <Link target={'_blank'} className={'w-full h-full'}
+                                    <Link target={'_blank'} className={'group w-full h-full relative'}
                                           href={`https://${ProjectSubDomain}.raianmelon.com/`}>
                                         <Image src={ImageUrl}
                                                className={'-z-10 opacity-50 hover:opacity-100 transition-all duration-300 rounded-xl w-full'}
                                                alt={`${ProjectName} projekt`} width={ImageWidth} height={ImageHeight}/>
+                                        <div className={'opacity-0 group-hover:opacity-50 bg-background w-full h-full absolute top-0 left-0 rounded-xl transition-all duration-400 flex items-center justify-center'}>
+                                            <Eye className={''} color={'#FED700'} size={70}/>
+                                        </div>
                                     </Link>
                                     <Link className={'group text-2xl flex gap-1.5 overflow-hidden project-name'} target={'_blank'} href={`https://${ProjectSubDomain}.raianmelon.com/`}>
                                         {ProjectName}
