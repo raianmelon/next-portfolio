@@ -157,7 +157,7 @@ export default function NavBar() {
                             <FilledButtonWithOutline key={id} href={link} onClick={toggleMenu} className={'opacity-0 translate-y-full inline-block px-6 py-3'} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(id-1)*100}ms`}}>{text}</FilledButtonWithOutline>
                     ) : null
                 ))}
-                    <Link className={'absolute bottom-4 left-0 text-6xl px-4 pb-4 opacity-0 translate-y-full inline-block'} href={"https://github.com/raianmelon"} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(6)*100}ms`}}><Image src={'/github-mark-white.svg'} alt={'Github'} width={50} height={50}></Image></Link>
+                    <Link className={'absolute bottom-0 left-0 px-4 pb-4 opacity-0 translate-y-full inline-block'} href={"https://github.com/raianmelon"} style={{animation: 'popupword 0.5s forwards', animationDelay: `${(6)*100}ms`}}><Image src={'/github-mark-white.svg'} alt={'Github'} width={50} height={50}></Image></Link>
             </div>
         )}
     </>

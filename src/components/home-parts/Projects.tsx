@@ -51,8 +51,8 @@ export default function Projects() {
                                         <Image src={ImageUrl}
                                                className={'-z-10 opacity-50 hover:opacity-100 transition-all duration-300 rounded-xl w-full'}
                                                alt={`${ProjectName} projekt`} width={ImageWidth} height={ImageHeight}/>
-                                        <div className={'opacity-0 group-hover:opacity-50 bg-background w-full h-full absolute top-0 left-0 rounded-xl transition-all duration-400 flex items-center justify-center'}>
-                                            <Eye className={''} color={'#FED700'} size={70}/>
+                                        <div className={'bg-opacity-0 group-hover:bg-opacity-50 bg-background w-full h-full absolute top-0 left-0 rounded-xl transition-all duration-400 flex items-center justify-center'}>
+                                            <Eye color={'#FED700'} className={'opacity-0 group-hover:opacity-80 transition-all duration-400'} size={70}/>
                                         </div>
                                     </Link>
                                     <Link className={'group text-2xl flex gap-1.5 overflow-hidden project-name'} target={'_blank'} href={`https://${ProjectSubDomain}.raianmelon.com/`}>
