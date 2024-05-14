@@ -3,7 +3,7 @@ import {InView} from 'react-intersection-observer';
 
 export const AnimatedHeading = ({ children, className }: {children: React.ReactNode, className?: string}) => {
     return (
-        <InView threshold={1}>
+        <InView threshold={0}>
             {({ inView, ref, entry }) => (
             <h1
                 ref={ref}
