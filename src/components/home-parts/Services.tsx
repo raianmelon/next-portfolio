@@ -84,7 +84,7 @@ export default function Services() {
                                 <AppWindow color={'#FED700'} size={40} strokeWidth={1.2}/>
                                 <h1 className={'text-2xl text-center'}>Web stranica</h1>
                             </div>
-                            <p className={'text-md font-light leading-8 opacity-0 inline-block translate-y-1/2 transition-all'} style={{animation: currentSlide === 2 ? 'popupword 1s forwards' : ''}}>Moj usluga izrade web stranica s pripremljenim
+                            <p className={'text-md font-light leading-8 opacity-0 inline-block translate-y-1/2 transition-all'} style={{animation: currentSlide === 2 ? 'popupword 1s forwards' : ''}}>Moja usluga izrade web stranica s pripremljenim
                                 dizajnom
                                 korisnika
                                 omogućuje vam brzo pokretanje online prisutnosti s minimalnim naporom. Koristeći vaš
