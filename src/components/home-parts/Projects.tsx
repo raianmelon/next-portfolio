@@ -7,6 +7,16 @@ import {AnimatedHeading} from "@/components/AnimatedElement";
 const projects = [
     {
         id: 1,
+        ImageUrl: '/shop-project.png',
+        ImageWidth: 640,
+        ImageHeight: 317,
+        githubUrl: 'https://github.com/raianmelon/next-shop',
+        ProjectSubDomain: 'trgovina',
+        ProjectName: 'Trgovina datoteka - U izradi',
+        ProjectDescription: 'Web shop datoteka sa integracijom Stripe-a, služi za kupovinu različitih datoteka poput ikona, e-knjiga, fontova...',
+    },
+    {
+        id: 2,
         ImageUrl: '/weather-project.png',
         ImageWidth: 640,
         ImageHeight: 317,
@@ -14,16 +24,6 @@ const projects = [
         ProjectSubDomain: 'vrijeme',
         ProjectName: 'Vrijeme',
         ProjectDescription: 'Web aplikacija koja pomoću lokacije uredaja ili pretraživanja može pratiti temperaturu, vrstu oblaka i brzinu vjetra za bilo koji grad iz Svijeta!',
-    },
-    {
-        id: 2,
-        ImageUrl: '/shop-project.png',
-        ImageWidth: 640,
-        ImageHeight: 315,
-        githubUrl: 'https://github.com/raianmelon/Trgovina',
-        ProjectSubDomain: 'trgovina',
-        ProjectName: 'Trgovina',
-        ProjectDescription: 'Web aplikacija u kojoj možete dodati novi proizvod u trgovinu. izmjeniti ime, cjenu, opis i sliku proizvoda.',
     }
 ]
 
