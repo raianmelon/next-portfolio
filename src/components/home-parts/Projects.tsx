@@ -12,8 +12,8 @@ const projects = [
         ImageHeight: 317,
         githubUrl: 'https://www.github.com/raianmelon/next-shop',
         ProjectSubDomain: 'trgovina',
-        ProjectName: 'Trgovina datoteka - U izradi',
-        ProjectDescription: 'Web shop datoteka sa integracijom Stripe-a, služi za kupovinu različitih datoteka poput ikona, e-knjiga, fontova...',
+        ProjectName: 'Trgovina datoteka',
+        ProjectDescription: 'U izradi - web shop datoteka sa integracijom Stripe-a, služi za kupovinu različitih datoteka poput ikona, e-knjiga, fontova...',
     },
     {
         id: 2,
