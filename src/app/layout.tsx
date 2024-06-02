@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
     return (
-    <html lang="en">
+    <html lang="hr">
     <body className={inter.className + ' bg-background text-white'}>
     <TitleHandler DefaultTitle={metadata.title}>
         <NavBar/>
